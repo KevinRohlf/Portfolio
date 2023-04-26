@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: var(--dark-blue);
+}
+
+.logo {
+    margin-left: 150px;
+    cursor: pointer;
+    font-size: 48px;
+    color: white;
+    position: relative;
+    &::after{
+        bottom: 0;
+        color: var(--green);
+        content: 'n';
+        position: absolute;
+        transform: translate(-100%, 0);
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 250px;
+    margin-right: 150px;
+
+
+    a {
+        text-decoration: none;
+        color: white;
+        transition: all ease-in-out 175ms;
+
+        &:hover {
+            color: var(--green);
+        }
+    }
+}
