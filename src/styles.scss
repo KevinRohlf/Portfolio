@@ -17,4 +17,8 @@ body {
     background-color: var(--dark-blue);
     width: 100vw;
     max-width: 100%;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }

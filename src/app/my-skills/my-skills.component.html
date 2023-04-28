@@ -1,0 +1,20 @@
+<div class="content">
+    <img class="shadow" src="./assets/img/green-shadow3.svg">
+    <div class="left-side">
+        <div *ngFor="let skill of skills; index as i" class="skill">
+            <img src="./assets/img/skills/{{skill.toLowerCase()}}.svg" alt="{{skill}}">
+            {{ skill }}
+        </div>
+    </div>
+    <div class="right-side">
+        <div>
+            <div class="h2box">
+                <h2>My skills</h2>
+                <img src="./assets/img/littlepurpleline.svg">
+            </div>
+            <div></div>
+            <p>I have gained experience in building projects with various front end technologies and concepts.</p>
+        </div>
+        <div class="button"><button>Get in touch</button></div>
+    </div>
+</div>
