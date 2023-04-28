@@ -8,16 +8,20 @@ header {
 
 .logo {
     margin-left: 150px;
-    cursor: pointer;
     font-size: 48px;
     color: white;
-    position: relative;
-    &::after{
-        bottom: 0;
-        color: var(--green);
-        content: 'n';
-        position: absolute;
-        transform: translate(-100%, 0);
+
+    a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        &::after {
+            bottom: 0;
+            color: var(--green);
+            content: 'n';
+            position: absolute;
+            transform: translate(-100%, 4%);
+        }
     }
 }
 

@@ -7,9 +7,14 @@
     --dark-blue-transparency: rgba(20, 29, 47, 0.8);
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     font-family: 'Poppins';
     background-color: var(--dark-blue);
+    width: 100vw;
+    max-width: 100%;
 }

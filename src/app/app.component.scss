@@ -3,6 +3,15 @@ app-header {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
+}
+
+app-i-am{
+    z-index: 1;
+}
+
+app-about-me {
+    z-index: 1;
+    position: relative;
 }
 
