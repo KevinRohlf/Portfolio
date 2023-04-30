@@ -1,0 +1,33 @@
+.content {
+    color: white;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+h2 {
+    font-size: 90px;
+    margin: 0;
+}
+
+.title {
+    align-items: center;
+    justify-content: space-between;
+    div {
+        width: 33%;
+        display: flex;
+        justify-content: flex-end;
+    }
+} 
+
+.second-line {
+    img{
+        width: 100%;
+    }
+}

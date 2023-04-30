@@ -69,6 +69,7 @@
     font-size: 52px;
     margin-right: -50px;
     margin-top: 15px;
+    white-space: nowrap
 }
 
 .name {
@@ -80,12 +81,14 @@
         font-size: 90px;
         margin-bottom: unset;
         margin-top: unset;
+        white-space: nowrap
     }
 
     span {
         margin-top: -44px;
         font-size: 48px;
         color: var(--purple);
+        white-space: nowrap
     }
 }
 
