@@ -15,6 +15,7 @@ header {
         text-decoration: none;
         color: white;
         position: relative;
+        cursor: pointer;
         &::after {
             bottom: 0;
             color: var(--green);
@@ -38,9 +39,27 @@ nav {
         text-decoration: none;
         color: white;
         transition: all ease-in-out 175ms;
-
+        cursor: pointer;
         &:hover {
             color: var(--green);
         }
+    }
+}
+
+.active {
+    color: var(--green) !important;
+    span {
+        animation: activeBorder ease 100ms;
+        border-bottom: 3px solid var(--purple);
+    }
+    
+}
+
+@keyframes activeBorder {
+    from {
+        border-bottom: 0px solid var(--purple);
+    }
+    to {
+        border-bottom: 3px solid var(--purple);
     }
 }

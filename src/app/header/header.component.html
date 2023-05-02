@@ -1,10 +1,10 @@
 <header>
     <h1 class="logo">
-        <a href="#">Kevin</a>
+        <a (click)="scrollTo('i-am')">Kevin</a>
         </h1>
     <nav>
-        <a href="#aboutme">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
+        <a [ngClass]="{'active': currentSection==='aboutme'}" (click)="scrollTo('aboutme')"><span>Abou</span>t me</a>
+        <a [ngClass]="{'active': currentSection==='skills'}" (click)="scrollTo('skills')"><span>Skills</span></a>
+        <a [ngClass]="{'active': currentSection==='portfolio'}"(click)="scrollTo('portfolio')"><span>Portf</span>olio</a>
     </nav>
 </header>

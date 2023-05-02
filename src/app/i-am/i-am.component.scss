@@ -10,6 +10,7 @@
     // background-size: cover;
     gap: 150px;
     padding-right: 150px;
+    position: relative;
     a {
         text-decoration: none;
         color: white;
@@ -25,6 +26,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        cursor: pointer;
         transform: rotate(90deg);
         img {
             transform: rotate(-90deg);

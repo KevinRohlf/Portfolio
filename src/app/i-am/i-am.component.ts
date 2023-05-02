@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./i-am.component.scss']
 })
 export class IAmComponent {
-
+  public scrollTo(section) {
+    document.querySelector('#' + section)
+    .scrollIntoView({ block: 'end',  behavior: 'smooth' });
+  }
 }

@@ -11,20 +11,20 @@
                 <span>FRONTEND DEVELOPER</span>
             </div>
         </div>
-        <button>Let´s talk!</button>
+        <button (click)="scrollTo('contact')">Let´s talk!</button>
     </div>
     <div class="social-container">
         <img src="./assets/img/stroke.svg" alt="">
         <div class="social-btns">
-            <img src="./assets/img/github.svg">
-            <img src="./assets/img/mail.svg">
-            <img src="./assets/img/linkedin.svg">
+            <a href="https://github.com/KevinRohlf" target=”_blank”><img src="./assets/img/github.svg"></a>
+            <a href="#contact"><img src="./assets/img/mail.svg"></a>
+            <a href="https://www.linkedin.com/in/kevin-rohlf-b75a97259/" target=”_blank”><img src="./assets/img/linkedin.svg"></a>
             <a href="mailto:Kevin@Rohlf.io">Kevin@Rohlf.io</a>            
         </div>
     </div>
     <div class="scroll-btn">
-        <a href="#aboutme">Scroll down <img src="./assets/img/arrow.svg"></a>
+        <a (click)="scrollTo('aboutme')">Scroll down <img src="./assets/img/arrow.svg"></a>
     </div>
-    
+    <img class="vector" src="./assets/img/swing.svg" alt="">
 </div>
-<img class="vector" src="./assets/img/swing.svg" alt="">
+

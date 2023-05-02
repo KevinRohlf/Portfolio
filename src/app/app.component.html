@@ -1,5 +1,19 @@
-<app-header></app-header>
-<app-i-am></app-i-am>
-<app-about-me id="aboutme"></app-about-me>
-<app-my-skills id="skills"></app-my-skills>
-<app-portfolio id="portfolio"></app-portfolio>
+<div id="parentDiv" scrollSpy [spiedTags]="['DIV']" class="content" (sectionChange)="onSectionChange($event)"
+    style="height: 100vh; overflow-y: scroll;">
+    <app-header [currentSection]="currentSection"></app-header>
+    <div id="i-am">
+        <app-i-am></app-i-am>
+    </div>
+    <div id="aboutme">
+        <app-about-me></app-about-me>
+    </div>
+    <div id="skills">
+        <app-my-skills></app-my-skills>
+    </div>
+    <div id="portfolio">
+        <app-portfolio></app-portfolio>
+    </div>
+    <div id="contact">
+        <app-contact></app-contact>
+    </div>
+</div>

@@ -8,6 +8,8 @@ import { IAmComponent } from './i-am/i-am.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ScrollSpyDirective } from './scroll-spy.directive';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     IAmComponent,
     AboutMeComponent,
     MySkillsComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ScrollSpyDirective,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
