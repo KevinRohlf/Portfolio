@@ -20,12 +20,12 @@ header {
             color: var(--green);
             content: 'n';
             position: absolute;
-            transform: translate(-100%, 4%);
+            transform: translate(-100%, -9%);
         }
     }
 }
 
-nav {
+div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,4 +43,8 @@ nav {
             color: var(--green);
         }
     }
+}
+
+.active {
+    color: orange;
 }

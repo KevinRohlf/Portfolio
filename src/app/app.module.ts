@@ -8,6 +8,9 @@ import { IAmComponent } from './i-am/i-am.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { ScrollspyDirective } from './scrollspy.directive';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,13 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     IAmComponent,
     AboutMeComponent,
     MySkillsComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ScrollspyDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

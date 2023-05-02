@@ -46,7 +46,7 @@
     }
 }
 
-.shadow {
+.shader {
     top: 200px;
     position: absolute;
     transform: scale(1.4);
@@ -66,9 +66,9 @@
 
 .vertical {
     transform: rotate(-90deg);
-    font-size: 52px;
+    font-size: 48px;
     margin-right: -50px;
-    margin-top: 15px;
+    margin-top: 5px;
     white-space: nowrap
 }
 
@@ -85,8 +85,8 @@
     }
 
     span {
-        margin-top: -44px;
-        font-size: 48px;
+        margin-top: -34px;
+        font-size: 46px;
         color: var(--purple);
         white-space: nowrap
     }

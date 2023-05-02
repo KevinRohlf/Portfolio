@@ -13,12 +13,22 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Poppins';
-    background-color: var(--dark-blue);
+    font-family: 'Poppins' !important;
+    background-color: var(--dark-blue) !important;
     width: 100vw;
     max-width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
 
     &::-webkit-scrollbar {
         display: none;
     }
 }
+
+app-root{
+    height: 300px;
+    overflow-y: scroll;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
