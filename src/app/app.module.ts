@@ -10,7 +10,6 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { ScrollspyDirective } from './scrollspy.directive';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { ScrollspyDirective } from './scrollspy.directive';
     IAmComponent,
     AboutMeComponent,
     MySkillsComponent,
-    PortfolioComponent,
-    ScrollspyDirective
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
