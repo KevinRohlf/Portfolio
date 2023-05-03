@@ -5,25 +5,3 @@ app-header {
     left: 0;
     z-index: 3;
 }
-
-app-i-am{
-    z-index: 1;
-}
-
-app-about-me {
-    z-index: 1;
-    position: relative;
-}
-
-.content {
-    height: 100vh;
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}
-
-#parentDiv {
-    margin-top: 100px;
-}

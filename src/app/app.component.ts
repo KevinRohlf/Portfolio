@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CurrentSectionService } from './current-section.service';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  currentSection: string;
 
-  onSectionChange(sectionId: string) {
-    this.currentSection = sectionId;
-  }
+  constructor(public handleSection: CurrentSectionService){}
 }

@@ -1,20 +1,4 @@
-<app-header [currentSection]="currentSection"></app-header>
-<div id="parentDiv" scrollSpy [spiedTags]="['DIV']" class="content" (sectionChange)="onSectionChange($event)"
-    style="height: 100vh; overflow-y: scroll;">
-    <div id="i-am">
-        <app-i-am></app-i-am>
-    </div>
-    <div id="aboutme">
-        <app-about-me [currentSection]="currentSection"></app-about-me>
-    </div>
-    <div id="skills">
-        <app-my-skills [currentSection]="currentSection"></app-my-skills>
-    </div>
-    <div id="portfolio">
-        <app-portfolio [currentSection]="currentSection"></app-portfolio>
-    </div>
-    <div id="contact">
-        <app-contact [currentSection]="currentSection"></app-contact>
-    </div>
-    <app-footer></app-footer>
+<app-header [currentSection]="handleSection.currentSection"></app-header>
+<div>
+    <router-outlet></router-outlet>
 </div>

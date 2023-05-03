@@ -1,1 +1,19 @@
-<p>mainsite works!</p>
+<div id="parentDiv" scrollSpy [spiedTags]="['DIV']" class="content" (sectionChange)="onSectionChange($event)"
+    style="height: 100vh; overflow-y: scroll;">
+    <div id="i-am">
+        <app-i-am></app-i-am>
+    </div>
+    <div id="aboutme">
+        <app-about-me [currentSection]="handleSection.currentSection"></app-about-me>
+    </div>
+    <div id="skills">
+        <app-my-skills [currentSection]="handleSection.currentSection"></app-my-skills>
+    </div>
+    <div id="portfolio">
+        <app-portfolio [currentSection]="handleSection.currentSection"></app-portfolio>
+    </div>
+    <div id="contact">
+        <app-contact [currentSection]="handleSection.currentSection"></app-contact>
+    </div>
+    <app-footer></app-footer>
+</div>
