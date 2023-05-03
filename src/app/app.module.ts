@@ -10,6 +10,9 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ScrollSpyDirective } from './scroll-spy.directive';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { MainsiteComponent } from './mainsite/mainsite.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ContactComponent } from './contact/contact.component';
     MySkillsComponent,
     PortfolioComponent,
     ScrollSpyDirective,
-    ContactComponent
+    ContactComponent,
+    FooterComponent,
+    ImprintComponent,
+    MainsiteComponent
   ],
   imports: [
     BrowserModule,

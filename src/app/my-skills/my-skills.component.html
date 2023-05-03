@@ -6,7 +6,7 @@
             {{ skill }}
         </div>
     </div>
-    <div class="right-side">
+    <div class="right-side" [ngClass]="currentSection == 'skills' ? 'come-from-right' : 'go-away'">
         <div>
             <div class="h2box">
                 <h2>My skills</h2>

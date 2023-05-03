@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-my-skills',
@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class MySkillsComponent {
 skills = ['Angular', 'Typescript', 'JavaScript', 'HTML', 'Firebase', 'GIT', 'CSS', 'Rest-Api', 'Scrum', 'Material Design']; 
+@Input() currentSection;
 }

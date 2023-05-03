@@ -10,15 +10,15 @@
 
 .left-side {
     display: flex;
-    padding-left: 120px;
-    width: 60%;
+    padding-left: 150px;
+    width: 70%;
     flex-wrap: wrap;
     z-index: 1;
 }
 
 .skill {
     display: flex;
-    margin-right: 140px;
+    margin-right: 150px;
     flex-direction: column;
     margin-bottom: 50px;
     align-items: center;
@@ -69,6 +69,16 @@
         padding-right: 135px;
         text-align: end;
     }
+}
+
+.come-from-right {
+    animation: comeFromRight ease 1s;
+    opacity: 1;
+}
+
+.go-away{
+    animation: goToRight ease 1s;
+    opacity: 0;
 }
 
 button {

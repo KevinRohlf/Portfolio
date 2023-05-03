@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --dark-blue : #141D2F;
-    --purple : #9747FF;
-    --light-blue : #1CDAE6;
-    --green : #70E61C;
+    --dark-blue: #141D2F;
+    --purple: #9747FF;
+    --light-blue: #1CDAE6;
+    --green: #70E61C;
     --dark-blue-transparency: rgba(20, 29, 47, 0.8);
 }
 
@@ -20,5 +20,53 @@ body {
 
     &::-webkit-scrollbar {
         display: none;
+    }
+}
+
+@keyframes comeFromLeft {
+    from {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes goToLeft {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+}
+
+@keyframes comeFromRight {
+    from {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes goToRight {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(500px);
+        opacity: 0;
     }
 }

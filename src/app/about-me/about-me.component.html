@@ -1,6 +1,6 @@
 <div class="content">
     <img class="shadow" src="./assets/img/purple-shadow1.svg">
-    <div class="left-side">
+    <div class="left-side" [ngClass]="currentSection == 'aboutme' ? 'come-from-left' : 'go-away'">
         <h2>About me</h2>
         <p class="top-text">Hi, I am a Front-end deverloper based in Hamburg, Germany(....)Lorem ipsum dolor sit amet,
             consectetur adipiscing elit. Ut auctor sem non tempus convallis. Integer et justo vitae urna finibus

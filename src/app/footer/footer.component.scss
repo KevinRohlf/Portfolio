@@ -1,0 +1,42 @@
+.content {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 150px;
+    padding-left: 150px;
+    height: 200px;
+    border-top: 4px solid var(--green);
+}
+
+.logo {
+    font-size: 48px;
+    position: relative;
+    &::after {
+        bottom: 0;
+        color: var(--green);
+        content: 'n';
+        position: absolute;
+        transform: translate(-100%, 0%);
+    }
+}
+
+.social-btns {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    img {
+        transition: all ease-in-out 175ms;
+        height: 30px;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}

@@ -8,6 +8,7 @@
     color: white;
     overflow-x: clip;
     overflow-y: visible !important;
+    padding-top: 100px;
     
     position: relative;
 
@@ -18,9 +19,14 @@
 }
 
 .left-side {
+    opacity: 0;
     font-size: 16px;
     max-width: 30%;
-    padding-left: 120px;
+    padding-left: 150px;
+}
+
+.go-away{
+    animation: goToLeft ease 1s;
 }
 
 tr {
@@ -34,6 +40,8 @@ tr {
 }
 
 .right-side {
+    position: absolute;
+    right: 0;
     z-index: 1;
     display: flex;
     justify-content: flex-end;
@@ -51,3 +59,30 @@ tr {
     margin-top: -150px;
     margin-right: -400px;
 }
+
+.come-from-left {
+    animation: comeFromLeft ease 1s;
+    opacity: 1;
+}
+
+// @keyframes comefromleft {
+//     from {
+//         transform: translateX(-500px);
+//         opacity: 0;
+//     }
+//     to {
+//         transform: translateX(0px);
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes goaway {
+//     from {
+//         transform: translateX(0px);
+//         opacity: 1;
+//     }
+//     to {
+//         transform: translateX(-500px);
+//         opacity: 0;
+//     }
+// }
