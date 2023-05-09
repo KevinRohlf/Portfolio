@@ -1,19 +1,17 @@
-<div id="parentDiv" scrollSpy [spiedTags]="['DIV']" class="content" (sectionChange)="onSectionChange($event)"
-    style="height: 100vh; overflow-y: scroll;">
+<div id="parentDiv">
     <div id="i-am">
         <app-i-am></app-i-am>
     </div>
     <div id="aboutme">
-        <app-about-me [currentSection]="handleSection.currentSection"></app-about-me>
+        <app-about-me></app-about-me>
     </div>
     <div id="skills">
-        <app-my-skills [currentSection]="handleSection.currentSection"></app-my-skills>
+        <app-my-skills></app-my-skills>
     </div>
     <div id="portfolio">
-        <app-portfolio [currentSection]="handleSection.currentSection"></app-portfolio>
+        <app-portfolio></app-portfolio>
     </div>
     <div id="contact">
-        <app-contact [currentSection]="handleSection.currentSection"></app-contact>
+        <app-contact></app-contact>
     </div>
-    <app-footer></app-footer>
 </div>

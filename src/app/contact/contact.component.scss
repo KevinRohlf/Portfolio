@@ -1,18 +1,37 @@
 .content {
     color: white;
     width: 100%;
-    height: 110vh;
+    
     position: relative;
-    overflow-y: clip;
+    overflow: clip;
 }
 
 .title {
     padding-top: 100px;
     display: flex;
+    align-items: center;
+
     gap: 50px;
     h2{
         color: white;
         font-size: 90px;
+    }
+
+    img {
+        width: 52px;
+        height: 4px;
+    }
+
+    @media (max-width: 1000px){
+        gap: 5px;
+        img {
+            width: 40px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin: unset;
+        }
     }
 }
 
@@ -20,24 +39,34 @@
     display: flex;
     justify-content: space-between;
     padding: 0px 150px 200px 150px;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        padding: 0px 40px 0px 40px;
+        gap: 40px;
+    }
 }
 
 .text-container {
     width: 40%;
+
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
 }
 
 .form-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     form {
         display: flex;
         flex-direction: column;
         gap: 35px;
         input {
+            background-color: var(--dark-blue);
             font-size: 16px;
             padding: 15px 25px;
-            background-color: unset;
             border: 1px solid var(--purple);
             border-radius: 10px;
             color: white;
@@ -47,7 +76,7 @@
             }
         }
         textarea {
-            background-color: unset;
+            background-color: var(--dark-blue);
             padding: 15px 25px;
             font-size: 16px;
             border: 1px solid var(--purple);
@@ -61,11 +90,20 @@
             }
         }
     }
-    width: 40%;
+    
     div {
         display: flex;
         justify-content: center;
     }
+
+    @media (max-width: 1000px) {
+         width: 100%;
+         padding-bottom: 100px;
+
+         textarea {
+            height: 20svh;
+         }
+    } 
 }
 
 button {
@@ -77,6 +115,7 @@ button {
     color: white;
     font-size: 23px;
     transition: all ease-in-out 175ms;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 
     &:hover {
         background-color: var(--purple);
@@ -91,4 +130,12 @@ button {
     margin-bottom: -400px;
     margin-left: -300px;
     transform: rotate(-130deg);
+
+    @media (max-width: 1000px) {
+        left: unset;
+        right: 0;
+        margin-left: unset;
+        margin-right: -400px;
+        transform: scale(0.5) rotate(90deg);
+    }
 }

@@ -1,10 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
-  @Input() currentSection;
+export class ContactComponent implements OnInit {
+
+  ngOnInit(): void {
+    AOS.init();
+  }
 }

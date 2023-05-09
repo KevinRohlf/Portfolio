@@ -8,11 +8,12 @@ import { IAmComponent } from './i-am/i-am.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ScrollSpyDirective } from './scroll-spy.directive';
+// import { ScrollSpyDirective } from './scroll-spy.directive';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainsiteComponent } from './mainsite/mainsite.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { MainsiteComponent } from './mainsite/mainsite.component';
     AboutMeComponent,
     MySkillsComponent,
     PortfolioComponent,
-    ScrollSpyDirective,
+    // ScrollSpyDirective,
     ContactComponent,
     FooterComponent,
     ImprintComponent,

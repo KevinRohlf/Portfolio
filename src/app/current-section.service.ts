@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class CurrentSectionService {
 
   currentSection!: string;
+  menuOpen: boolean = false;
 
   constructor() { }
 }

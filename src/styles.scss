@@ -17,56 +17,23 @@ body {
     background-color: var(--dark-blue);
     width: 100vw;
     max-width: 100%;
+    height: 100svh;
 
     &::-webkit-scrollbar {
         display: none;
     }
 }
 
-@keyframes comeFromLeft {
-    from {
-        transform: translateX(-500px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0px);
-        opacity: 1;
-    }
+.mobile {
+    display: none;
 }
 
-@keyframes goToLeft {
-    from {
-        transform: translateX(0px);
-        opacity: 1;
+@media (max-width: 1000px) {
+    .desktop {
+        display: none;
     }
 
-    to {
-        transform: translateX(-500px);
-        opacity: 0;
-    }
-}
-
-@keyframes comeFromRight {
-    from {
-        transform: translateX(500px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes goToRight {
-    from {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateX(500px);
-        opacity: 0;
+    .mobile {
+        display: unset;
     }
 }

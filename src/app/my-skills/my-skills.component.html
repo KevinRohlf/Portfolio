@@ -1,20 +1,22 @@
 <div class="content">
+    <div class="button mobile mobile-btn"><button>Get in touch</button></div>
     <img class="shadow" src="./assets/img/green-shadow3.svg">
-    <div class="left-side">
+    <div class="left-side" data-aos="fade-right">
         <div *ngFor="let skill of skills; index as i" class="skill">
             <img src="./assets/img/skills/{{skill.toLowerCase()}}.svg" alt="{{skill}}">
             {{ skill }}
         </div>
     </div>
-    <div class="right-side" [ngClass]="currentSection == 'skills' ? 'come-from-right' : 'go-away'">
+    <div class="right-side" data-aos="fade-left">
         <div>
             <div class="h2box">
                 <h2>My skills</h2>
-                <img src="./assets/img/littlepurpleline.svg">
+                <img class="line" src="./assets/img/line.png">
             </div>
             <div></div>
             <p>I have gained experience in building projects with various front end technologies and concepts.</p>
         </div>
-        <div class="button"><button>Get in touch</button></div>
+        <div class="button desktop"><button>Get in touch</button></div>
     </div>
+    
 </div>

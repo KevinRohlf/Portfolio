@@ -6,6 +6,12 @@
     color: white;
     position: relative;
     overflow-x: clip;
+
+    @media (max-width: 1000px) {
+        flex-direction: column-reverse;
+        align-items: unset;
+        height: 110svh;
+    }
 }
 
 .left-side {
@@ -14,6 +20,14 @@
     width: 70%;
     flex-wrap: wrap;
     z-index: 1;
+
+    @media (max-width: 1000px){
+        padding-left: 40px;
+        padding-right: 40px;
+        width: calc(100% - 80px);
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .skill {
@@ -28,7 +42,23 @@
         img {
             animation: jump 0.7s infinite;
         }
+    }
+    @media (max-width: 1000px){
+        display: flex;
+        margin-right: unset;
+        flex-direction: column;       
+        width: 33%;
+        text-align: center;    
+        img {
+            height: 45px;
+        }
+        &:last-child {
+            margin-bottom: unset !important;
+        }
+    }
 
+    @media (max-width: 1250px){
+        margin-right: unset;
     }
 }
 
@@ -47,21 +77,31 @@
 }
 
 .h2box {
-
     display: flex;
     justify-content: flex-end;
     gap: 75px;
+    align-items: center;
+
+    @media (max-width: 1000px){
+        display: flex;
+        justify-content: flex-end;
+        gap: unset;
+        img {
+            width: 40px;
+        }
+    }
 }
 
 .right-side {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
 
     h2 {
         text-align: end;
         margin-top: unset;
         margin-bottom: unset;
+        white-space: nowrap;
         font-size: 90px;
     }
 
@@ -69,21 +109,29 @@
         padding-right: 135px;
         text-align: end;
     }
+
+    @media (max-width: 1000px){
+        width: unset;
+        h2 {
+            font-size: 3rem;
+        }
+    
+        p {
+            padding-left: 40px;
+            padding-right: 40px;
+            font-size: 0.9rem;
+        }
+    }
 }
 
-.come-from-right {
-    animation: comeFromRight ease 1s;
-    opacity: 1;
-}
-
-.go-away{
-    animation: goToRight ease 1s;
-    opacity: 0;
+.line {
+    width: 60px;
+    height: 4px;
 }
 
 button {
     background-color: var(--green);
-
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     padding: 15px 30px 15px 30px;
     border: unset;
@@ -103,6 +151,13 @@ button {
     display: flex;
     justify-content: center;
     width: 100%;
+
+    @media (max-width: 1000px){
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        z-index: 1;
+    }
 }
 
 .shadow{
@@ -112,4 +167,25 @@ button {
     margin-left: -550px;
     margin-bottom: -450px;
     transform: scaleY(-1);
+
+    @media (max-width: 1000px){
+        transform: scale(0.5) scaleY(-1);
+    }
+}
+
+.mobile {
+    display: none;
+    @media (max-width: 1000px){
+        display: flex;
+    }
+}
+
+@media (max-width: 1000px){
+    .desktop {
+        display: none !important;
+    }
+    
+    .mobile-btn {
+        padding-bottom: 50px;
+    }
 }

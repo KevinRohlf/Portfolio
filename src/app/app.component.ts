@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CurrentSectionService } from './current-section.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { CurrentSectionService } from './current-section.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent{  
 
   constructor(public handleSection: CurrentSectionService){}
 }

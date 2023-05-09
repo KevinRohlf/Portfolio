@@ -1,10 +1,25 @@
 <header>
     <h1 class="logo">
         <a routerLink="/">Kevin</a>
-        </h1>
-    <nav>
-        <a [ngClass]="{'active': currentSection==='aboutme'}" (click)="scrollTo('aboutme')"><span>Abou</span>t me</a>
-        <a [ngClass]="{'active': currentSection==='skills'}" (click)="scrollTo('skills')"><span>Skills</span></a>
-        <a [ngClass]="{'active': currentSection==='portfolio'}"(click)="scrollTo('portfolio')"><span>Portf</span>olio</a>
+    </h1>
+    <nav class="desktop desktop-menu">
+        <a [ngClass]="{'active': section === 'aboutme'}" (click)="scrollTo('aboutme')"><span>Abou</span>t me</a>
+        <a [ngClass]="{'active': section === 'skills'}" (click)="scrollTo('skills')"><span>Skills</span></a>
+        <a [ngClass]="{'active': section === 'portfolio'}" (click)="scrollTo('portfolio')"><span>Portf</span>olio</a>
     </nav>
+
+    <div class="burger mobile">
+        <img *ngIf="!menuOpen.menuOpen" src="./assets/img/burger.svg" (click)="openMenu()">
+        <img *ngIf="menuOpen.menuOpen" src="./assets/img/close.svg" (click)="closeMenu()">
+    </div>
+
+
 </header>
+<div class="mobile d-none" *ngIf="menuOpen.menuOpen">
+    <nav class="mobile-menu" data-aos="fade-left" data-aos-duration="500">
+        <a (click)="scrollTo('aboutme'); closeMenu()">About me</a>
+        <a (click)="scrollTo('skills'); closeMenu()">My skills</a>
+        <a (click)="scrollTo('portfolio'); closeMenu()">Portfolio</a>
+        <a (click)="scrollTo('contact'); closeMenu()">Contact</a>
+    </nav>
+</div>

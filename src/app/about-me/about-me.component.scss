@@ -9,7 +9,7 @@
     overflow-x: clip;
     overflow-y: visible !important;
     padding-top: 100px;
-    
+
     position: relative;
 
     h2 {
@@ -19,19 +19,15 @@
 }
 
 .left-side {
-    opacity: 0;
     font-size: 16px;
     max-width: 30%;
     padding-left: 150px;
 }
 
-.go-away{
-    animation: goToLeft ease 1s;
-}
-
 tr {
     td {
         padding-bottom: 35px;
+
         &:first-child {
             padding-left: 35px;
             padding-right: 35px;
@@ -44,12 +40,20 @@ tr {
     right: 0;
     z-index: 1;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
-    img:first-child{
-        height: 500px;
+    
+
+    img:first-child {
+        width: 30vw;
         border: var(--green) 3px solid;
         border-radius: 100%;
-    }    
+    }
+}
+
+.line {
+    height: 4px;
+    width: 20vw;
 }
 
 .shadow {
@@ -60,29 +64,31 @@ tr {
     margin-right: -400px;
 }
 
-.come-from-left {
-    animation: comeFromLeft ease 1s;
-    opacity: 1;
+@media (max-width: 1000px) {
+    .content {
+        padding-top: unset;
+        justify-content: center;
+        height: unset;
+        h2 {
+        font-size: 3rem;
+    }
+    }
+
+    .left-side {
+        font-size: 0.9rem;
+        max-width: 90%;
+        padding: 0px 40px;
+        
+        z-index: 1;
+    }
+
+    .shadow {
+        transform: scale(0.5);
+        margin-top: -250px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
 }
-
-// @keyframes comefromleft {
-//     from {
-//         transform: translateX(-500px);
-//         opacity: 0;
-//     }
-//     to {
-//         transform: translateX(0px);
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes goaway {
-//     from {
-//         transform: translateX(0px);
-//         opacity: 1;
-//     }
-//     to {
-//         transform: translateX(-500px);
-//         opacity: 0;
-//     }
-// }
