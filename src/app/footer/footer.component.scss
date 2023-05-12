@@ -7,31 +7,43 @@
     padding-left: 150px;
     height: 200px;
     border-top: 4px solid var(--green);
+    
+    @media (max-width: 1000px) {
+        height: 300px;
+        justify-content: space-around;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
 }
 
-.imprint{
+.imprint {
     color: white;
     text-decoration: none;
     font-weight: 400;
+    transition: all ease-in-out 175ms;
+    &:hover {
+        color: var(--green);
+    }
 }
 
 .logo {
     font-size: 48px;
     margin: 0;
-    
-    a{
-       position: relative; 
-       text-decoration: none;
-       color: white;
-       &::after {
-        bottom: 0;
-        color: var(--green);
-        content: 'n';
-        position: absolute;
-        transform: translate(-100%, 4%);
-    } 
+
+    a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+
+        &::after {
+            bottom: 0;
+            color: var(--green);
+            content: 'n';
+            position: absolute;
+            transform: translate(-100%, 4%);
+        }
     }
-    
+
 }
 
 .social-btns {
@@ -43,7 +55,8 @@
     img {
         transition: all ease-in-out 175ms;
         height: 30px;
-        &:hover{
+
+        &:hover {
             transform: scale(1.2);
         }
     }
@@ -54,10 +67,28 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
 }
 
 @media (max-width: 1000px) {
     .content {
         flex-direction: column;
     }
+}
+
+.desktop {
+    @media (max-width: 1000px) {
+        display: none !important;
+    }
+}
+
+.mobile {
+    display: none;
+    @media (max-width: 1000px) {
+        display: unset;
+    }
+}
+
+.copyright {
+    white-space: nowrap;
 }

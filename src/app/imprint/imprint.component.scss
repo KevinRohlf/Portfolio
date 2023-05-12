@@ -2,4 +2,13 @@
     height: calc(100vh - 304px);
     color: white;
     padding: 100px 150px 0px 150px;
+
+    a {
+        color: var(--green);
+        text-decoration: none;
+    }
+
+    @media (max-width: 1000px) {
+        padding: 100px 40px 50px 40px; 
+    } 
 }

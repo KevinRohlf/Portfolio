@@ -9,12 +9,12 @@
             <span>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</span>
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
-        <div class="form-container">
-            <form action="" data-aos="zoom-in-up" data-aos-duration="1000">
-                <input type="text" required placeholder="Your name">
-                <input type="email" required placeholder="Your email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-                <div><button>Send message :)</button></div>
+        <div class="form-container" >
+            <form (submit)="sendMail()" ngNativeValidate method="POST" data-aos="zoom-in-up" data-aos-duration="1000" #myForm>
+                <input name="name" type="text" required placeholder="Your name" #nameField>
+                <input type="email" required placeholder="Your email" #emailField>
+                <textarea required name="message" id="" cols="30" rows="10" placeholder="Your message" #messageField></textarea>
+                <div><button #sendButton>Send message :)</button></div>
             </form>
         </div>
     </div>

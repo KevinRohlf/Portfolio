@@ -3,6 +3,9 @@
     width: 100%;
     position: relative;
     overflow-x: clip;
+    @media (max-width: 1000px){
+        padding-top: 100px;
+    }
 }
 
 .flex {
@@ -147,7 +150,7 @@ table {
 
 .btns {
     display: flex;
-    width: 100%;
+    width: 60%;
     justify-content: space-between;
     margin-top: 35px;
 
@@ -160,6 +163,10 @@ table {
         cursor: pointer;
         color: white;
         transition: all ease-in-out 175ms;
+    }
+
+    @media (max-width: 1000px) {
+        width: 100%;
     }
 }
 
@@ -190,7 +197,7 @@ table {
     @media (max-width: 1000px) {
         transform: scale(0.4);
         margin-left: -200px;
-        top: 33%;
+        top: 36%;
     }
 }
 

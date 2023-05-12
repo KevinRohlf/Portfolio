@@ -8,11 +8,12 @@ import { IAmComponent } from './i-am/i-am.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-// import { ScrollSpyDirective } from './scroll-spy.directive';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainsiteComponent } from './mainsite/mainsite.component';
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,6 @@ import { MainsiteComponent } from './mainsite/mainsite.component';
     AboutMeComponent,
     MySkillsComponent,
     PortfolioComponent,
-    // ScrollSpyDirective,
     ContactComponent,
     FooterComponent,
     ImprintComponent,
@@ -31,7 +31,9 @@ import { MainsiteComponent } from './mainsite/mainsite.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
