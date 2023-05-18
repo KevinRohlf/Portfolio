@@ -59,13 +59,15 @@
     display: flex;
     flex-direction: column;
     width: 40%;
+    gap: 35px;
     form {
         display: flex;
         flex-direction: column;
-        gap: 35px;
+        
         input {
             background-color: var(--dark-blue);
             font-size: 16px;
+            width: 100%;
             padding: 15px 25px;
             border: 1px solid var(--purple);
             border-radius: 10px;
@@ -79,6 +81,7 @@
             background-color: var(--dark-blue);
             padding: 15px 25px;
             font-size: 16px;
+            width: 100%;
             border: 1px solid var(--purple);
             border-radius: 10px;
             color: white;
@@ -89,12 +92,40 @@
                 color: white;
             }
         }
+
+        input,
+        textarea {
+            &.ng-touched,
+            &.ng-dirty {
+    
+                &.ng-invalid {
+                    border: 1px solid #E61C40;
+                    background-image: url('/assets/img/invalid.svg');
+                    background-repeat: no-repeat;
+                    background-position: top 12px right 25px;
+                }
+    
+                &.ng-valid {
+                    border: 1px solid #70E61C;
+                    background-image: url('/assets/img/valid.svg');
+                    background-repeat: no-repeat;
+                    background-position: top 12px right 25px;
+                }
+            }
+        }
+
+        .error {
+            color: red;
+        }
+    
+        p {
+            font-size: 12px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
     }
     
-    div {
-        display: flex;
-        justify-content: center;
-    }
+    
 
     @media (max-width: 1000px) {
          width: 100%;
@@ -121,6 +152,17 @@ button {
         background-color: var(--purple);
         transform: scale(1.1);
     }
+
+    &:disabled {
+            opacity: 0.1;
+            cursor: unset;
+
+            &:hover {
+                background: var(--purple);
+                padding: 15px 30px;
+            }
+        }
+
 }
 
 .shadow {
@@ -138,4 +180,69 @@ button {
         margin-right: -400px;
         transform: scale(0.5) rotate(90deg);
     }
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    & input,
+    textarea {
+        width: 620px;
+        border-radius: 10px;
+        border: none;
+        border: 1px solid #FF4747;
+        background-color: #141D2F;
+        padding: 15px 25px;
+        cursor: pointer;
+        font-family: 'Poppins';
+        color: white;
+        transition: all 125ms ease-in-out;
+        box-sizing: border-box;
+
+        &.ng-touched,
+        &.ng-dirty {
+
+            &.ng-invalid {
+                border: 1px solid #E61C40;
+                background-image: url('/assets/img/invalid.svg');
+                background-repeat: no-repeat;
+                background-position: top 12px right 25px;
+            }
+
+            &.ng-valid {
+                border: 1px solid #70E61C;
+                background-image: url('/assets/img/valid.svg');
+                background-repeat: no-repeat;
+                background-position: top 12px right 25px;
+            }
+        }
+
+
+        &::placeholder {
+            color: white;
+            font-family: 'Poppins';
+        }
+
+        &:hover {
+            border: 1px solid #FA7902;
+            transition: all 125ms ease-in-out;
+        }
+    }
+
+    .error {
+        color: red;
+    }
+
+    p {
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+}
+
+.btn-container {
+    height: 70px;
+    align-self: center;
 }

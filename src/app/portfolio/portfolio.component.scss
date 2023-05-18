@@ -135,6 +135,7 @@ table {
 }
 
 .project-text {
+    width: 100%;
     h3 {
         margin: 0;
         font-size: 32px;
@@ -151,17 +152,22 @@ table {
 .btns {
     display: flex;
     width: 60%;
+    
     justify-content: space-between;
     margin-top: 35px;
+
+    a {
+        text-decoration: none;
+    }
 
     button {
         padding: 15px 30px 15px 30px;
         font-size: 23px;
-        font-family: 'Poppins';
+        font-family: 'Poppins', sans-serif;
         border-radius: 10px;
         width: max-content;
-        cursor: pointer;
         color: white;
+        cursor: pointer;
         transition: all ease-in-out 175ms;
     }
 

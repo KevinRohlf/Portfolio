@@ -10,11 +10,41 @@
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
         <div class="form-container" >
-            <form (submit)="sendMail()" ngNativeValidate method="POST" data-aos="zoom-in-up" data-aos-duration="1000" #myForm>
-                <input name="name" type="text" required placeholder="Your name" #nameField>
-                <input type="email" required placeholder="Your email" #emailField>
-                <textarea required name="message" id="" cols="30" rows="10" placeholder="Your message" #messageField></textarea>
-                <div><button #sendButton>Send message :)</button></div>
+            <div><span *ngIf="success" data-aos="flip-up">E-Mail send :)</span> </div>
+            <form [formGroup]="messageForm" class="right-container" (submit)="sendMail()" #myForm>
+                <div data-aos="fade-up">
+                    <input formControlName="name" required type="text" placeholder="Your name" #nameField>
+                    <ng-container *ngIf="messageForm.controls['name'] as name">
+                        <ng-container *ngIf="name.dirty || name.touched">
+                            <p class="error" *ngIf="name.errors">Your name is required</p>
+                        </ng-container>
+                    </ng-container>
+                </div>
+                <div data-aos="fade-up">
+                    <input formControlName="email" type="email" placeholder="Your email" #emailField>
+                    <ng-container *ngIf="messageForm.controls['email'] as email">
+                        <ng-container *ngIf="email.dirty || email.touched">
+                            <p class="error" *ngIf="email.errors?.['required']">Your email is required</p>
+                            <p class="error" *ngIf="email.errors?.['email']">Your email is invalid</p>
+                        </ng-container>
+                    </ng-container>
+                </div>
+                <div data-aos="fade-up">
+                    <textarea formControlName="message" name="" id="" cols="30" rows="10" placeholder="Your message"
+                        #messageField></textarea>
+                    <ng-container *ngIf="messageForm.controls['message'] as message">
+                        <ng-container *ngIf="message.dirty || message.touched">
+                            <p class="error" *ngIf="message.errors">Your message is empty</p>
+                        </ng-container>
+                    </ng-container>
+                </div>
+                <div data-aos="fade-up" class="btn-container">
+                    <button #sendButton id="sendButton" [disabled]="!messageForm.valid">Send message :)</button>
+                    <p *ngIf="messageSent" data-aos="fade-up">Message sent!</p>
+                </div>
+                <div data-aos="fade-up" class="go-up-container">
+                    <a href="#" class="go-up-icon"></a>
+                </div>
             </form>
         </div>
     </div>

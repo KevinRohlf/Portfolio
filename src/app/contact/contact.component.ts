@@ -1,4 +1,5 @@
-import { Component, Input, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import AOS from 'aos';
 
 @Component({
@@ -13,10 +14,25 @@ export class ContactComponent implements OnInit {
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
 
+  messageSent: boolean;
+  success: boolean;
 
   ngOnInit(): void {
     AOS.init();
   }
+
+  public messageForm: FormGroup = new FormGroup({
+    name: new FormControl('', [
+      Validators.required
+    ], []),
+    email: new FormControl('', [
+      Validators.email,
+      Validators.required
+    ], []),
+    message: new FormControl('', [
+      Validators.required
+    ], []),
+  })
 
   async sendMail() {
     let nameField = this.nameField.nativeElement;
@@ -27,7 +43,7 @@ export class ContactComponent implements OnInit {
 
     let fd = new FormData()
     fd.append('name', nameField.value);
-    fd.append('message', 'Email:'+ emailField.value + `\n\n` + 'message:' + messageField.value);
+    fd.append('message', 'Email: '+ emailField.value + `\n\n` + 'message: ' + messageField.value);
     //send 
     await fetch('http://kevin-rohlf.developerakademie.net/send_mail/send_mail.php',
       {
@@ -35,7 +51,12 @@ export class ContactComponent implements OnInit {
         body: fd
       }
     )
+    this.clearForm(nameField, messageField, emailField, sendButton)
     this.enableForm(nameField, messageField, emailField, sendButton);
+    this.success = true;
+    setTimeout(() => {
+      this.success = false;
+    }, 5000);
   }
 
 
@@ -52,4 +73,13 @@ export class ContactComponent implements OnInit {
     emailField.disabled = false;
     sendButton.disabled = false;
   }
+
+  clearForm(nameField, messageField, emailField, sendButton){
+    nameField.value = '';
+    messageField.value = '';
+    emailField.value = '';
+    sendButton.value = '';
+  }
+
+
 }
