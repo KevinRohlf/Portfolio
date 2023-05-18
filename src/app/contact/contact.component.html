@@ -1,15 +1,17 @@
 <div class="content">
     <img class="shadow" src="./assets/img/shadow-footer.svg">
     <div class="title">
-        <img src="./assets/img/line.png"><h2>Contact</h2>
+        <img src="./assets/img/line.png">
+        <h2>Contact</h2>
     </div>
     <div class="flex-container" data-aos="zoom-in-up" data-aos-duration="1000">
         <div class="text-container">
             <h3>Got a problem to solve?</h3>
-            <span>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</span>
+            <span>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to
+                your projects with my work.</span>
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
-        <div class="form-container" >
+        <div class="form-container">
             <div><span *ngIf="success" data-aos="flip-up">E-Mail send :)</span> </div>
             <form [formGroup]="messageForm" class="right-container" (submit)="sendMail()" #myForm>
                 <div data-aos="fade-up">
@@ -46,6 +48,17 @@
                     <a href="#" class="go-up-icon"></a>
                 </div>
             </form>
+            <div class="upBtn">
+                <a href="#">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 15.828L13.343 20.485C12.9525 20.8755 12.3194 20.8755 11.929 20.485V20.485C11.5385 20.0945 11.5385 19.4615 11.929 19.071L18.2928 12.7071C18.6834 12.3166 19.3165 12.3166 19.7071 12.7071L26.071 19.071C26.4614 19.4615 26.4614 20.0945 26.071 20.485V20.485C25.6805 20.8755 25.0474 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5522 28 19 28V28C18.4477 28 18 27.5523 18 27L18 15.828Z"
+                            fill="white" />
+                        <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
+                    </svg>
+                </a>
+            </div>
+
         </div>
     </div>
 </div>

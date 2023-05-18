@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class IAmComponent {
   public scrollTo(section) {
     document.querySelector('#' + section)
-    .scrollIntoView({ block: 'end',  behavior: 'smooth' });
+    .scrollIntoView({ block: 'start',  behavior: 'smooth' });
   }
 }
