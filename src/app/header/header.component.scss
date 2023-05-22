@@ -44,6 +44,7 @@ header {
     a {
         text-decoration: none;
         color: white;
+        font-size: 18px;
         transition: all ease-in-out 175ms;
         cursor: pointer;
         &:hover {
@@ -70,7 +71,7 @@ header {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .burger {
         margin-right: 40px;
     }

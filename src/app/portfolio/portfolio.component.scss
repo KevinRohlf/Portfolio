@@ -3,9 +3,7 @@
     width: 100%;
     position: relative;
     overflow-x: clip;
-    @media (max-width: 1000px){
-        padding-top: 100px;
-    }
+    padding-top: 100px;
 }
 
 .flex {
@@ -112,6 +110,7 @@ table {
         tr {
             flex-direction: column;
             text-align: center;
+            align-items: center;
 
             &:nth-child(even) {
                 flex-direction: column-reverse;
@@ -124,8 +123,18 @@ table {
         }
 
         td {
-            width: 100%;
+            width: 70%;
             text-align: center;
+
+            img {
+                width: 70%;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        td {
+            width: 100%;
 
             img {
                 width: 100%;
@@ -171,7 +180,7 @@ table {
         transition: all ease-in-out 175ms;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1500px) {
         width: 100%;
     }
 }
@@ -199,12 +208,21 @@ table {
     position: absolute;
     top: 45%;
     margin-left: -100px;
+    left: unset;
 
     @media (max-width: 1000px) {
         transform: scale(0.4);
+        top: 34%;
+        left: 20%;
+    }
+
+    @media (max-width: 500px) {
+        transform: scale(0.4);
         margin-left: -200px;
         top: 36%;
+        left: unset;
     }
+
 }
 
 .shadow-right {
@@ -221,3 +239,5 @@ table {
         transform: scale(0.5) rotate(75deg);
     }
 }
+
+

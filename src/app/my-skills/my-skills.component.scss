@@ -1,5 +1,5 @@
 .content {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7,7 +7,7 @@
     position: relative;
     overflow-x: clip;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
         flex-direction: column-reverse;
         align-items: unset;
         height: 110svh;
@@ -22,7 +22,7 @@
     flex-wrap: wrap;
     z-index: 1;
 
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         padding-left: 40px;
         padding-right: 40px;
         width: calc(100% - 80px);
@@ -44,7 +44,7 @@
             animation: jump 0.7s infinite;
         }
     }
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         display: flex;
         margin-right: unset;
         flex-direction: column;       
@@ -83,7 +83,7 @@
     gap: 75px;
     align-items: center;
 
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         display: flex;
         justify-content: flex-end;
         gap: unset;
@@ -111,7 +111,7 @@
         text-align: end;
     }
 
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         width: unset;
         h2 {
             font-size: 3rem;
@@ -153,7 +153,7 @@ button {
     justify-content: center;
     width: 100%;
 
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         display: flex;
         justify-content: center;
         width: 100%;
@@ -169,7 +169,7 @@ button {
     margin-bottom: -450px;
     transform: scaleY(-1);
 
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         transform: scale(0.5) scaleY(-1);
         margin-bottom: -550px;
     }
@@ -177,12 +177,12 @@ button {
 
 .mobile {
     display: none;
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         display: flex;
     }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1200px){
     .desktop {
         display: none !important;
     }

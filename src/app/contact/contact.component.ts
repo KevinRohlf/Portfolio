@@ -43,9 +43,9 @@ export class ContactComponent implements OnInit {
 
     let fd = new FormData()
     fd.append('name', nameField.value);
-    fd.append('message', 'Email: '+ emailField.value + `\n\n` + 'message: ' + messageField.value);
+    fd.append('message', 'Email: '+ emailField.value + `\n\n` + 'Message: ' + messageField.value);
     //send 
-    await fetch('http://kevin-rohlf.developerakademie.net/send_mail/send_mail.php',
+    await fetch('https://kevin-rohlf.developerakademie.net/send_mail/send_mail.php',
       {
         method: 'post',
         body: fd
@@ -56,7 +56,7 @@ export class ContactComponent implements OnInit {
     this.success = true;
     setTimeout(() => {
       this.success = false;
-    }, 5000);
+    }, 3000);
   }
 
 

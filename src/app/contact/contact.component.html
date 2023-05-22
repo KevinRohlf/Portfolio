@@ -12,7 +12,6 @@
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
         <div class="form-container">
-            <div><span *ngIf="success" data-aos="flip-up">E-Mail send :)</span> </div>
             <form [formGroup]="messageForm" class="right-container" (submit)="sendMail()" #myForm>
                 <div data-aos="fade-up">
                     <input formControlName="name" required type="text" placeholder="Your name" #nameField>
@@ -40,6 +39,7 @@
                         </ng-container>
                     </ng-container>
                 </div>
+                <div class="success"><span *ngIf="success" data-aos="flip-up">E-Mail send :)</span> </div>
                 <div data-aos="fade-up" class="btn-container">
                     <button #sendButton id="sendButton" [disabled]="!messageForm.valid">Send message :)</button>
                     <p *ngIf="messageSent" data-aos="fade-up">Message sent!</p>

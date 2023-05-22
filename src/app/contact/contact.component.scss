@@ -4,10 +4,14 @@
 
     position: relative;
     overflow: clip;
+
+    @media (max-width: 1000px) {
+        padding-top: 100px;
+    }
 }
 
 .title {
-    padding-top: 100px;
+    
     display: flex;
     align-items: center;
 
@@ -46,6 +50,7 @@
         flex-direction: column;
         padding: 0px 40px 0px 40px;
         gap: 40px;
+        
     }
 }
 
@@ -285,4 +290,11 @@ button {
     @media (max-width: 1000px){
         margin-bottom: -50px;
     }
+}
+
+.success {
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
