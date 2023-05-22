@@ -190,7 +190,6 @@ button {
         justify-content: unset;
         overflow-x: clip;
         gap: 0px;
-        min-height: 830px;
     }
 
     .pictures {
@@ -200,22 +199,23 @@ button {
         max-height: 600px;
         justify-content: center;
         overflow: clip;
-        height: 100vw;
-        min-height: 550px;
+        height: 50vh;
+        // min-height: 550px;
+        overflow: clip;
 
 
         img {
             width: 90%;
-            min-width: 450px;
+            min-width: 320px;
             height: 90%;
-            min-height: 450px;
-            max-height: 600px;
+            min-height: 320px;
+            max-height: 430px;
             object-fit: contain;
             margin-bottom: 50px;
             bottom: 0;
 
-            @media (max-width: 600px) {
-                margin-bottom: unset;
+            @media (max-height: 800px) {
+                margin-bottom: 0px;
             }
         }
     }
@@ -251,7 +251,7 @@ button {
 
     .vector {
         height: 500px;
-        top: 355px;
+        top: 200px;
     }
 
     .social-container {
