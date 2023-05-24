@@ -49,6 +49,7 @@ tr {
 
     img:first-child {
         width: 30vw;
+        max-width: 600px;
         border: var(--green) 3px solid;
         border-radius: 100%;
     }
