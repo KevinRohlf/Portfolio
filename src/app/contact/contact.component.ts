@@ -1,6 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import AOS from 'aos';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-contact',
@@ -43,12 +45,15 @@ export class ContactComponent implements OnInit {
 
     let fd = new FormData()
     fd.append('name', nameField.value);
-    fd.append('message', 'Email: '+ emailField.value + `\n\n` + 'Message: ' + messageField.value);
+    fd.append('message', 'Email: ' + emailField.value + `\n\n` + 'Message: ' + messageField.value);
     //send 
-    await fetch('https://kevin-rohlf.developerakademie.net/send_mail/send_mail.php',
+    await fetch(environment.url,
       {
         method: 'post',
-        body: fd
+        body: fd,
+        headers: {
+          'Accept': 'application/json'
+        }
       }
     )
     this.clearForm(nameField, messageField, emailField, sendButton)
@@ -74,7 +79,7 @@ export class ContactComponent implements OnInit {
     sendButton.disabled = false;
   }
 
-  clearForm(nameField, messageField, emailField, sendButton){
+  clearForm(nameField, messageField, emailField, sendButton) {
     nameField.value = '';
     messageField.value = '';
     emailField.value = '';
